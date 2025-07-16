@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modas MyH</title>
+  <link rel="stylesheet" href="estilo.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="header">
+    <h1>🛍️ Modas MyH</h1>
+    <p>Moda para todos los estilos</p>
+
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+
+     <!-- FILTROS -->
+    <div id="filters-container">
+      <select id="filter-category"></select>
+      <input type="number" id="filter-price" placeholder="Precio máximo" min="0" step="1" />
+    </div>
+
+    
+  <main id="home-view" class="view">
+    <div id="product-list" class="product-grid"></div>
+    <div id="product-detail-container"></div>
+  </main>
+
+
+  <!-- BOTÓN FLOTANTE DEL CARRITO -->
+  <div id="carrito-flotante" class="carrito-flotante">🛒 Carrito (0)</div>
+
+  <script src="app.js"></script>
+</body>
+</html>

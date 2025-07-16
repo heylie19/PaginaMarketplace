@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #fefefe;
+  padding-bottom: 70px;
+  color: #333;
+}
+
+.header {
+  background-color: #f8f4f0;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+  font-size: 26px;
+  color: #c0392b;
+}
+
+.header p {
+  font-size: 14px;
+  color: #666;
+}
+
+.section-title {
+  font-size: 20px;
+  margin: 20px 16px 10px;
+}
+
+.view {
+  display: none;
+  padding: 16px;
+}
+
+.view:not(.hidden) {
+  display: block;
+}
+
+/* Filtros */
+.filtros-superior {
+  display: flex;
+  gap: 10px;
+  padding: 10px 16px;
+  position: sticky;
+  top: 0;
+  background-color: #fefefe;
+  z-index: 9;
+  border-bottom: 1px solid #ddd;
+}
+
+.filtros-superior select {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+#filters-container {
+  max-width: 1000px;
+  margin: 24px auto 0;
+  display: flex;
+  justify-content:right;
+  gap: 16px;
+  padding: 0 16px;
+}
+
+
+/* Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.product-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  margin: 8px 0 4px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Detalle */
+.product-detail {
+  text-align: center;
+}
+
+.product-detail img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.product-detail h2 {
+  margin: 10px 0;
+}
+
+.product-detail button {
+  margin-top: 16px;
+  padding: 10px 24px;
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.back-btn {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  color: #2d3436;
+  text-decoration: underline;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Carrito */
+.cart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.cart-item img {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+
+.cart-info {
+  flex-grow: 1;
+}
+
+.cart-info h3 {
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.cart-info p {
+  color: #444;
+  font-weight: bold;
+}
+
+.cart-remove {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #e74c3c;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+  font-size: 16px;
+}
+
+/* Menú inferior */
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #c0392b;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  z-index: 10;
+}
+
+.bottom-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Botón flotante del carrito */
+.carrito-flotante {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #c0392b;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-size: 16px;
+  z-index: 20;
+  cursor: pointer;
+}
+
+/* Categorías */
+.categories-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  padding-top: 10px;
+}
+
+.category-card {
+  background: #fff0f0;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #f3c6c6;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.category-card h3 {
+  margin-bottom: 6px;
+  color: #b33939;
+}
+
+.category-card p {
+  font-size: 14px;
+  color: #555;
+}
